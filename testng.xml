@@ -10,5 +10,10 @@
     <classes>
       <class name="testCases.LoginTest"/>
     </classes>
-  </test> 
+  </test>
+  <test thread-count="5" name="Shoping process">
+    <classes>
+      <class name="testCases.LoginTest"/>
+    </classes>
+  </test>
 </suite> <!-- Suite -->

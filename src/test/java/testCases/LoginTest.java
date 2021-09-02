@@ -17,16 +17,12 @@ public class LoginTest extends base {
 	@BeforeTest
 	public void beforeTest() throws IOException {
 		driver = initializeDriver();
-		driver.get("http://automationpractice.com/");
 	}
 	
 	@Test
-	public void createNewAccount() throws Exception {
-		HomePage homePage = new HomePage(driver);
-		homePage.clickSinginButton()
-		.typeEmailAddress(prop.getProperty("email"))
-		.typePassword(prop.getProperty("password"))
-		.clickSubmitButton();
+	public void login() throws Exception {
+		Common common = new  Common();
+		HomePage homePage = common.logIn(driver);
 		
 		String actualTitle = homePage.getAccountTitle();
 		Assert.assertEquals(actualTitle, "Angel Retana");

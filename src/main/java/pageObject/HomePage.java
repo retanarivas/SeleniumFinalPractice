@@ -18,6 +18,15 @@ public class HomePage {
 	@FindBy(xpath="//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
 	WebElement singoutButton;
 	
+	@FindBy(xpath="//*[@id=\"block_top_menu\"]/ul/li[3]/a")
+	WebElement tShirtsButton;
+	
+	@FindBy(xpath="//*[@id=\"center_column\"]/ul/li/div/div[2]/div[2]/a[1]")
+	WebElement addToCartButton;
+	
+	@FindBy(xpath="//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
+	WebElement proceedToCheckoutButton;
+	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -35,5 +44,20 @@ public class HomePage {
 	
 	public String getAccountTitle() throws Exception {
 		return customerAccountTitle.getText();
+	}
+	
+	public HomePage clickTshirtButton() throws Exception {
+		tShirtsButton.click();
+		return this;
+	}
+	
+	public HomePage clickaddToCartButton() throws Exception {
+		addToCartButton.click();
+		return this;
+	}
+	
+	public ShopingCartPage clickProceedToCheckoutButton() throws Exception {
+		proceedToCheckoutButton.click();
+		return new ShopingCartPage(driver);
 	}
 }

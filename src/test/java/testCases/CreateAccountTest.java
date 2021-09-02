@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObject.HomePage;
+import resources.Constants;
 import resources.base;
 
 public class CreateAccountTest extends base {
@@ -17,7 +18,7 @@ public class CreateAccountTest extends base {
 	@BeforeTest
 	public void beforeTest() throws IOException {
 		driver = initializeDriver();
-		driver.get("http://automationpractice.com/");
+		driver.get(Constants.url);
 		
 	}
 	
@@ -25,12 +26,12 @@ public class CreateAccountTest extends base {
 	public void createNewAccount() throws Exception {
 		HomePage homePage = new HomePage(driver);
 		HomePage logedHomePage = homePage.clickSinginButton()
-			.typeCreateEmailAddress(prop.getProperty("email"))
+			.typeCreateEmailAddress(Constants.mail)
 			.clickCreateAccountButton()
 			.selectMrTitle()
 			.typeFirstName("Angel")
 			.typeLastName("Retana")
-			.typePassword(prop.getProperty("password"))			
+			.typePassword(Constants.password)			
 			.selectBirthDate("10", "6", "2007")
 			.typeCompany("Test")
 			.typeAddress("Siempre viva 123")

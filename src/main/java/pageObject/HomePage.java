@@ -37,9 +37,9 @@ public class HomePage {
 		return new SigninPage(driver);
 	}
 	
-	public SigninPage clickSingoutButton() throws Exception {
+	public HomePage clickSingoutButton() throws Exception {
 		singoutButton.click();
-		return new SigninPage(driver);
+		return new HomePage(driver);
 	}
 	
 	public String getAccountTitle() throws Exception {
@@ -59,5 +59,13 @@ public class HomePage {
 	public ShopingCartPage clickProceedToCheckoutButton() throws Exception {
 		proceedToCheckoutButton.click();
 		return new ShopingCartPage(driver);
+	}
+	
+	public String getSiginTitle() throws Exception {
+		return singinButton.getText();
+	}
+	
+	public String getSigoutTitle() throws Exception {
+		return singoutButton.getText();
 	}
 }

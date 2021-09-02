@@ -1,0 +1,5 @@
+testCases\Common.class
+testCases\ShopProcessTest.class
+testCases\SignoffTest.class
+testCases\CreateAccountTest.class
+testCases\LoginTest.class

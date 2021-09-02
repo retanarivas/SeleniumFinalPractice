@@ -13,7 +13,12 @@
   </test>
   <test thread-count="5" name="Shoping process">
     <classes>
-      <class name="testCases.LoginTest"/>
+      <class name="testCases.ShopProcessTest"/>
+    </classes>
+  </test>
+  <test thread-count="5" name="Log out">
+    <classes>
+      <class name="testCases.SignoffTest"/>
     </classes>
   </test>
 </suite> <!-- Suite -->

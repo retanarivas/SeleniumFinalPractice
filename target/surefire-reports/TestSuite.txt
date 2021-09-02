@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 52.56 s <<< FAILURE! - in TestSuite
-testCases.CreateAccountTest.createNewAccount  Time elapsed: 9.615 s  <<< FAILURE!
-java.lang.NullPointerException
-	at testCases.CreateAccountTest.createNewAccount(CreateAccountTest.java:28)
-
-testCases.LoginTest.createNewAccount  Time elapsed: 11.313 s  <<< FAILURE!
-java.lang.NullPointerException
-	at testCases.LoginTest.createNewAccount(LoginTest.java:27)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.448 s - in TestSuite

@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObject.ShopingCartPage;
+import resources.Constants;
 import resources.base;
 
 public class ShopProcessTest extends base {
@@ -35,7 +36,7 @@ public class ShopProcessTest extends base {
 		.clickConfirmOrderButton();
 		
 		String actualConfirmMessage = shopingCart.getConfirmMessage();
-		Assert.assertEquals(actualConfirmMessage, "Your order on My Store is complete.");
+		Assert.assertEquals(actualConfirmMessage, Constants.confirmOrderMessage);
 	}
 	
 	@AfterTest

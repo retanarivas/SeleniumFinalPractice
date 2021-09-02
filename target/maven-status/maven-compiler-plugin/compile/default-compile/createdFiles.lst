@@ -1,0 +1,6 @@
+resources\base.class
+resources\Constants.class
+pageObject\SigninPage.class
+pageObject\ShopingCartPage.class
+pageObject\AuthenticationPage.class
+pageObject\HomePage.class
